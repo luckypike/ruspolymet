@@ -6,7 +6,11 @@ export default function Header () {
   return (
     <div>
       <div className={styles.container}>
-        ZZZ
+        <div className={styles.text}>
+          <h1>
+            Вместе — сильнее!
+          </h1>
+        </div>
       </div>
     </div>
   )

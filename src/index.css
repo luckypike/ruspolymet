@@ -7,6 +7,7 @@
 }
 
 body {
+  hyphens: auto;
   padding: 0;
   margin: 0;
   /* font-smoothing: antialiased */
@@ -15,8 +16,17 @@ body {
   line-height: 1.5rem;
 }
 
+@media (min-width: 720px) {
+  body {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+}
 
-@custom-media --s (min-width: 720px);
-@custom-media --m (min-width: 960px);
-@custom-media --l (min-width: 1280px);
-@custom-media --xl (min-width: 1600px);
+p {
+  margin: 0 0 0.5rem;
+}
+
+p:last-child {
+  margin: 0;
+}
