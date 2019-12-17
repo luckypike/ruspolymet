@@ -1,5 +1,6 @@
 .container {
   position: relative;
+  background-color: #666;
 }
 
 .container::after {
@@ -10,14 +11,13 @@
   bottom: 0;
   height: 100%;
   background-color: #000;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: 0;
 }
 
 .container::before {
   content: '';
   display: block;
-  background-color: #666;
   padding-top: calc(5 / 4 * 100%);
 }
 
