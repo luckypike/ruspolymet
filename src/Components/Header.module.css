@@ -37,7 +37,16 @@ video {
   z-index: 1;
 }
 
+h1 {
+  font-weight: 500;
+}
+
 @media (min-width: 720px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
   .text {
     padding: 2rem;
   }
