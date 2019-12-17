@@ -1,0 +1,44 @@
+.slider {
+  position: relative;
+  padding: 4rem calc(3 / 18 * 100%);
+}
+
+.navs {
+  display: flex;
+}
+
+.nav {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid #C4C3C1;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+.nav:last-child {
+  margin-right: 0;
+}
+
+.active {
+  border: 2px solid #141414;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 1.75rem;
+}
+
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.image:before {
+  display: block;
+  content: '';
+  padding-top: calc(3 / 4 * 100%);
+}
