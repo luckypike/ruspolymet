@@ -11,10 +11,11 @@
   cursor: pointer;
   height: 1.5rem;
   width: 1.5rem;
-  border: 1px solid #C4C3C1;
+  box-shadow: 0 0 0 1px #C4C3C1;
   border-radius: 50%;
   text-align: center;
   margin-right: 0.5rem;
+  transition: box-shadow 0.3s;
 }
 
 .nav:last-child {
@@ -22,7 +23,7 @@
 }
 
 .active {
-  border: 2px solid #141414;
+  box-shadow: 0 0 0 2px #141414;
 }
 
 .images {
