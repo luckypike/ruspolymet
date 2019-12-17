@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import classNames from 'classnames'
 import AnimateHeight from 'react-animate-height'
 
@@ -8,18 +8,25 @@ import styles from './Interview.module.css'
 
 export default function Zvm () {
   const [height, setHeight] = useState(0)
+  const mount = useRef()
+
+  function scrollIntoView () {
+    mount.current.scrollIntoView({ behavior: 'smooth' })
+
+    setHeight(height === 0 ? 'auto' : 0)
+  }
 
   return (
     <>
       <div className={classNames(styles.root, styles.right)}>
-        <div className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
+        <div ref={mount} className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
 
         <div className={styles.text}>
           <div className={styles.quote}>Наша цель — занять 15-20% российского рынка титана</div>
           <div className={styles.who}>Евгений Амелин, директор ООО «Завод вакуумной металлургии»</div>
           <button
             className={styles.more}
-            onClick={() => setHeight(height === 0 ? 'auto' : 0)}
+            onClick={scrollIntoView}
           >
             Читать интервью
           </button>

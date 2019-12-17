@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import AnimateHeight from 'react-animate-height'
 
 import Photo from './Vlz.jpg'
@@ -7,18 +7,25 @@ import styles from './Interview.module.css'
 
 export default function Vlz () {
   const [height, setHeight] = useState(0)
+  const mount = useRef()
+
+  function scrollIntoView () {
+    mount.current.scrollIntoView({ behavior: 'smooth' })
+
+    setHeight(height === 0 ? 'auto' : 0)
+  }
 
   return (
     <>
       <div className={styles.root}>
-        <div className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
+        <div ref={mount} className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
 
         <div className={styles.text}>
           <div className={styles.quote}>Мы выйдем на новые рубежи</div>
           <div className={styles.who}>Юрий Бобков, генеральный директор Выксунского литейного завода</div>
           <button
             className={styles.more}
-            onClick={() => setHeight(height === 0 ? 'auto' : 0)}
+            onClick={scrollIntoView}
           >
             Читать интервью
           </button>
