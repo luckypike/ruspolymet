@@ -10,7 +10,8 @@
   line-height: 1.5rem;
 }
 
-.intro, .last {
+.intro,
+.last {
   padding: 1rem;
 }
 
@@ -20,7 +21,8 @@
 }
 
 @media (min-width: 720px) {
-  .intro, .last {
+  .intro,
+  .last {
     padding: 2rem;
   }
 
@@ -30,7 +32,6 @@
 
   .text {
     padding: 2rem;
-
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
@@ -56,7 +57,8 @@
 }
 
 @media (min-width: 960px) {
-  .intro, .last {
+  .intro,
+  .last {
     padding: 4rem;
   }
 
@@ -70,7 +72,8 @@
 }
 
 @media (min-width: 1280px) {
-  .intro, .last {
+  .intro,
+  .last {
     padding: 4rem calc(3 / 18 * 100%);
   }
 

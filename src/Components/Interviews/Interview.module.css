@@ -2,20 +2,17 @@
   background: #f4f4f4;
 }
 
-.right {
-
-}
-
 .photo {
   position: relative;
+  background-color: #666;
+  background-position: center;
+  background-size: cover;
 }
 
 .photo::before {
   content: '';
   display: block;
-  background-color: #666;
   padding-top: calc(1 / 1 * 100%);
-
 }
 
 .text {
@@ -30,7 +27,6 @@
   font-weight: 500;
   line-height: 1.75rem;
   margin-bottom: 1rem;
-
 }
 
 .text::before {
@@ -64,11 +60,25 @@
   cursor: pointer;
 }
 
+.interview {
+  background: #f4f4f4;
+  padding: 0 1rem 3rem;
+}
+
+.q {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
 @media (min-width: 720px) {
   .root {
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+  }
+
+  .interview {
+    padding: 0 2rem 2rem;
   }
 
   .photo {
@@ -82,7 +92,6 @@
   .text {
     padding: 0;
     align-self: center;
-    /* padding: 2rem; */
     padding-left: calc(1 / 8 * 100%);
     grid-column: span 8;
   }
@@ -115,6 +124,10 @@
     padding: 4rem;
   }
 
+  .interview {
+    padding: 0 4rem 4rem;
+  }
+
   .text {
     padding: 2rem 4rem;
   }
@@ -128,7 +141,10 @@
   .root {
     padding: 0;
     grid-template-columns: repeat(18, 1fr);
-    /* padding: 4rem calc(3 / 18 * 100%); */
+  }
+
+  .interview {
+    padding: 8rem calc(3 / 18 * 100%);
   }
 
   .photo {
