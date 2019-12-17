@@ -29,8 +29,6 @@ export default function Slider () {
 
   const [current, setCurrent] = useState(0)
 
-  console.log(current)
-
   return (
     <div className={styles.slider}>
       <div ref={mountRef} className={styles.images}>
