@@ -7,10 +7,10 @@ import styles from './Interview.module.css'
 
 export default function Maxim () {
   const [height, setHeight] = useState(0)
-  const mount = useRef()
+  const mountRef = useRef()
 
-  function scrollIntoView () {
-    mount.current.scrollIntoView({ behavior: 'smooth' })
+  function handleScroll () {
+    mountRef.current.scrollIntoView({ behavior: 'smooth' })
 
     setHeight(height === 0 ? 'auto' : 0)
   }
@@ -18,14 +18,14 @@ export default function Maxim () {
   return (
     <>
       <div className={styles.root}>
-        <div ref={mount} className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
+        <div ref={mountRef} className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
 
         <div className={styles.text}>
           <div className={styles.quote}>Мы знаем, как развиваться</div>
           <div className={styles.who}>Максим Клочай, генеральный директор металлургического металлообрабатывающего предприятия ПАО «Русполимет»</div>
           <button
             className={styles.more}
-            onClick={scrollIntoView}
+            onClick={handleScroll}
           >
             Читать интервью
           </button>

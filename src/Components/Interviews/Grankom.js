@@ -8,10 +8,10 @@ import styles from './Interview.module.css'
 
 export default function Grankom () {
   const [height, setHeight] = useState(0)
-  const mount = useRef()
+  const mountRef = useRef()
 
-  function scrollIntoView () {
-    mount.current.scrollIntoView({ behavior: 'smooth' })
+  function handleScroll () {
+    mountRef.current.scrollIntoView({ behavior: 'smooth' })
 
     setHeight(height === 0 ? 'auto' : 0)
   }
@@ -19,14 +19,14 @@ export default function Grankom () {
   return (
     <>
       <div className={classNames(styles.root, styles.right)}>
-        <div ref={mount} className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
+        <div ref={mountRef} className={styles.photo} style={{ backgroundImage: `url(${Photo})` }} />
 
         <div className={styles.text}>
           <div className={styles.quote}>Гранком может конкурировать с иностранными производителями</div>
           <div className={styles.who}>Артем Максимов, директор ООО «Гранком»</div>
           <button
             className={styles.more}
-            onClick={scrollIntoView}
+            onClick={handleScroll}
           >
             Читать интервью
           </button>
