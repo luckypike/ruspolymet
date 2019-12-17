@@ -70,15 +70,15 @@
   font-weight: 500;
 }
 
-.a {
-  margin-left: calc(1 / 8 * 100%);
-}
-
 @media (min-width: 720px) {
   .root {
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+  }
+
+  .a {
+    margin-left: calc(1 / 12 * 100%);
   }
 
   .interview {
@@ -145,6 +145,10 @@
   .root {
     padding: 0;
     grid-template-columns: repeat(18, 1fr);
+  }
+
+  .a {
+    margin-left: calc(1 / 18 * 100%);
   }
 
   .interview {
