@@ -70,6 +70,10 @@
   font-weight: 500;
 }
 
+.a {
+  margin-left: calc(1 / 8 * 100%);
+}
+
 @media (min-width: 720px) {
   .root {
     padding: 2rem;
