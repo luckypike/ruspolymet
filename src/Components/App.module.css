@@ -1,8 +1,5 @@
 .root {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 2px;
+
 }
 
 .intro {
@@ -26,7 +23,6 @@
 
 .intro,
 .last {
-  /* padding: 1rem; */
   padding: 3rem 1rem;
 }
 
@@ -88,7 +84,7 @@
 
   .last {
     padding-top: 0;
-  }  
+  }
 
   .vstup {
     margin-bottom: 4rem;
